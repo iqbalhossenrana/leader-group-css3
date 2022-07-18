@@ -1,0 +1,157 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:wght@400;500&display=swap');
+
+/* comon style and utilized */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #E5E5E5;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    background-color: #FFFFFF;
+    width: 870px;
+    padding: 30px;
+    margin-top: 25px;
+
+}
+
+.section-titel {
+    color: #562EFF;
+    font-size: 24px;
+    border-radius: 5px;
+    margin-top: 3px;
+
+}
+
+/* top-players style */
+.top-players {
+    margin-bottom: 30px;
+}
+
+.players {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 29px;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+}
+
+
+.player img {
+    width: 56px;
+    height: 56px;
+}
+
+.player-name {
+    margin-left: 16px;
+    font-size: 18px;
+}
+
+hr {
+    border: 1px solid #D1D1D1;
+    margin-bottom: 30px;
+}
+
+/*--------------
+ --------top-blog-style--------- */
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 26px;
+}
+
+.blog {
+    display: flex;
+}
+
+.blog .thumbail img {
+    width: 177px;
+    height: 117px;
+}
+
+.blog-titel {
+    font-size: 20px;
+}
+
+
+
+.autor a {
+    text-decoration: none;
+    color: #562EFF;
+    font-size: 16px;
+}
+
+
+/*-------------------------
+ latest-cources style 
+ --------------------------------*/
+.cources {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+
+.cource .cource-banner img {
+    width: 224px;
+    height: 104px;
+}
+
+.fa-star.filter {
+    color: #FFC014;
+}
+
+.fa-star.empty {
+    color: #AEAEAE;
+}
+
+.cource-info-ratting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*-------------------
+ media queries 
+ --------------------------- */
+
+/* Mobile device */
+@media only screen and (max-width:688px) {
+    .container {
+        width: 100%;
+    }
+
+    .player {
+        flex-direction: column;
+    }
+
+    .players,
+    .blogs,
+    .cources {
+
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+}
+
+/* tablet devices */
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .container {
+        width: 100%;
+    }
+
+    .players,
+    .cources {
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+}
